@@ -18,7 +18,7 @@ Funcionalidade: Restaurantes
         Quando acesso a lista de restaurantes
         Então cada restaurante deve exibir sua categoria
 
-    @temp
+    
     Cenario: Tempo de entrega
 
         Quando acesso a lista de restaurantes
@@ -28,3 +28,15 @@ Funcionalidade: Restaurantes
 
         Quando acesso a lista de restaurantes
         Então cada restaurante deve exibir sua nota de avaliação
+        
+    @temp
+    Esquema do Cenario: Restaurantes disponíveis
+
+        Quando acesso a lista de restaurantes
+        Então cada restaurante deve ter <nome> <categoria> <entrega> <avaliacao>
+
+        Exemplos:
+        | id | nome             | categoria | entrega      | avaliacao |
+        | 0  | "Bread & Bakery" | "Padaria" | "25 minutos" | 4.9      |
+        | 1  | "Burger House"   | "Hamburgers"| "30 minutos" | 3.5 |
+        | 2  | "Coffee House" | "Cafeteria" | "20 minutos" | 4.8 |

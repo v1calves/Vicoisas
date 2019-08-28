@@ -39,3 +39,7 @@ Então("cada restaurante deve exibir sua nota de avaliação") do
     expect(restaurants[index]).to have_text value[:rating]
   end
 end
+
+Então("cada restaurante deve ter {string} {string} {string} {float}") do |name, category, delivery_time, rating|
+  restaurants = all(".restaurant-item")
+end

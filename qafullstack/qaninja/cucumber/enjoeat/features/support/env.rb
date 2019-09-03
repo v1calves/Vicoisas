@@ -6,6 +6,6 @@ Selenium::WebDriver::Chrome.driver_path = "/QA_treino/Vicoisas/qafullstack/qanin
 
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
-  config.app_host = "http://enjoeat-sp2.herokuapp.com"
+  config.app_host = "http://enjoeat-sp3.herokuapp.com"
   config.default_max_wait_time = 10
 end

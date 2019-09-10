@@ -36,12 +36,29 @@ Quando("eu adiciono todos os itens") do
             find(".menu-item-info-box", text: p["nome"].upcase).find('.add-to-cart').click
         end
     end
-  end
+end
   
-  Então("vejo todos os itens no carrinho") do
+Então("vejo todos os itens no carrinho") do
     cart = find("#cart")
     @product_list.each do |p|
         expect(cart).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
     end
 
-  end
+end
+
+  #Remover itens
+
+Dado("que eu tenho os seguintes itens no carrinho:") do |table|
+    @product_list = table.hashes
+
+    @product_list.each do |p|
+        p["quantidade"].to_i.times do
+            find(".menu-item-info-box", text: p["nome"].upcase).find('.add-to-cart').click
+        end
+    end
+end
+  
+Quando("eu removo somente o item {int}") do |item|
+    cart = find('#cart')
+    cart.all('table tbody tr')[item].find(".danger").click
+end

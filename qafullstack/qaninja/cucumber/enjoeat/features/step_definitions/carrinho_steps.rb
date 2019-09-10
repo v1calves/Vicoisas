@@ -58,7 +58,7 @@ Dado("que eu tenho os seguintes itens no carrinho:") do |table|
     end
 end
   
-Quando("eu removo somente o item {int}") do |item|
+Quando("eu removo somente o {int}") do |item|
     cart = find('#cart')
     cart.all('table tbody tr')[item].find(".danger").click
 end

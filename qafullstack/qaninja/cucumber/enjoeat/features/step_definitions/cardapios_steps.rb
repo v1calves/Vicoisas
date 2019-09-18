@@ -20,7 +20,7 @@ end
 
 Então("eu vejo as seguintes informações adicionais:") do |table|
   infos = table.rows_hash
-  detail = rest_page.details
+  detail = @rest_page.details
   expect(detail).to have_text infos["categoria"]
   expect(detail).to have_text infos["descricao"]
   expect(detail).to have_text infos["horarios"]

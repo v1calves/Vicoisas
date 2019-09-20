@@ -68,3 +68,26 @@ Quando("eu removo todos os itens") do
   Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
     expect(@rest_page.cart.box).to have_text mensagem
   end
+
+  //
+
+  Dado("que adicionei os seguintes itens no carrinho:") do |table|
+    # table is a Cucumber::MultilineArgument::DataTable
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Quando("eu fecho o meu carrinho") do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Então("o valor total de itesn deve ser igual a {string}") do |string|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Então("o valor do frete deve ser igual a {string}") do |string|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Então("o valor total da compra deve ser igual a {string}") do |string|
+    pending # Write code here that turns the phrase above into concrete actions
+  end

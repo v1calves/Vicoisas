@@ -12,10 +12,10 @@ Dado("informei os dados de entrega:") do |table|
   sleep 5
 end
 
-Quando("eu finalizo o pedido com {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("eu finalizo o pedido com {string}") do |payment|
+  @order_page.checkout(payment)
 end
 
-Então("devo ver a seguinte mensagem:") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Então("devo ver a seguinte mensagem:") do |expect_message|
+  expect(@order_page.summary).to have_text expect_message
 end

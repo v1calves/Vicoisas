@@ -5,6 +5,7 @@ Funcionalidade: Finalizar pedido
     Sendo um usuário que fechou o carrinho com itens
     Posso finalizar o meu pedido
 
+    @smoke
     Cenario: Finalizar pedido com Cartão Refeição
 
         Dado que eu fecheu o pedido com os itens:
